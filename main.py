@@ -26,8 +26,8 @@ def calculate_cer_details(gt, pred):
     return cer, formula
 
 # Path file ground truth dan direktori gambar
-ground_truth_file = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\archive\Indonesian License Plate Recognition Dataset\test\ground_truth.csv"
-image_dir = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\archive\Indonesian License Plate Recognition Dataset\test"
+ground_truth_file = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\Indonesian License Plate Recognition Dataset\test\ground_truth.csv"
+image_dir = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\Indonesian License Plate Recognition Dataset\test"
 
 # Baca file CSV ground truth
 df = pd.read_csv(ground_truth_file)
@@ -70,11 +70,11 @@ for index, row in df.iterrows():
         ],
         "stream": False
     }
-
     try:
         response = requests.post("http://localhost:1234/v1/chat/completions", json=payload)
         response.raise_for_status()
         pred = response.json()["choices"][0]["message"]["content"].strip()
+        pred = pred.replace(" ", "")
     except Exception as e:
         pred = f"ERROR: {e}"
 

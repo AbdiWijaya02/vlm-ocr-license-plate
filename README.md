@@ -182,7 +182,7 @@ cd path/ke/folder/Indonesian License Plate Recognition Dataset
 
 git init
 
-git remote add origin https://github.com/YOUR\_USERNAME/vlm-ocr-license-plate.git
+git remote add origin https://github.com/AbdiWijaya02/vlm-ocr-license-plate.git
 
 git add .
 
@@ -191,8 +191,6 @@ git commit -m "Initial commit: OCR with VLM"
 git branch -M main
 
 git push -u origin main
-
-Ganti YOUR\_USERNAME dengan username GitHub kamu.
 
 
 

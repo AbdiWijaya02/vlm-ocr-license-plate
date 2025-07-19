@@ -2,7 +2,7 @@ import os
 import csv
 
 # === Ganti sesuai folder kamu ===
-folder = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\archive\Indonesian License Plate Recognition Dataset\test"
+folder = r"C:\Users\acer\Pictures\KULIAH SEMESTER 6\RE604 Computer Vision\Indonesian License Plate Recognition Dataset\test"
 output_csv = os.path.join(folder, "ground_truth.csv")
 
 # === Mapping class_id ke karakter ===
